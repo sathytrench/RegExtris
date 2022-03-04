@@ -1,3 +1,13 @@
+TO DO:
+
+-change game so that it starts on the main menu instead of the login/signup (done)
+-make sure fairy doesn't remain next to play (no longer happening)
+-remove db, chart stuff, extra chart screen (still need to remove unnecessary backend stuff)
+-readme note (done)
+
+## Note
+
+When [Spandana Nallapati](https://github.com/drsnallapati), [Ali Wojcikiewicz](https://github.com/aliwojo), [Annie Cho](https://github.com/skai233) and I built this game for our capstone project at the Grace Hopper Program, we included logins and a database that stored players' scores in order to analyze their progress in learning Regex. While this was an important aspect of our project, I've forked and edited our repo here in order to more easily show off our game. For anyone interested in RegExtris in its original form, you can play that [here](https://regextris.herokuapp.com/) and view the original repo [here](https://github.com/SA3-Games/RegExtris). The original readme below still applies, though PostgreSQL and Sequelize are no longer in the stack. 
 
 <h1 align="center">
   <img src="https://github.com/SA3-Games/RegExtris/blob/master/public/assets/spritesheets/REGEXTRISbw2.png" alt="RegExtris" width="800">

@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import store from '../store';
-import { me, logout } from '../store/singlePlayer';
 
 export default class MenuScene extends Phaser.Scene {
   constructor() {
@@ -18,7 +17,6 @@ export default class MenuScene extends Phaser.Scene {
     this.load.image('title', 'assets/spritesheets/REGEXTRISbw2.png');
     this.load.image('play', 'assets/menuSprites/play.png');
     this.load.image('learnmode', 'assets/menuSprites/learnmode.png');
-    this.load.image('logout', 'assets/menuSprites/logout.png');
   }
 
   create() {
@@ -27,12 +25,9 @@ export default class MenuScene extends Phaser.Scene {
     this.enter = this.input.keyboard.addKey('ENTER');
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    store.dispatch(me());
-    this.player = store.getState().player;
-
     //welcome message
     this.add
-      .text(600, 90, `welcome, ${this.player.alias}!`, {
+      .text(600, 90, `welcome!`, {
         fontFamily: 'retroFont',
         fontSize: 20,
         color: '#7a8bf4',
@@ -54,9 +49,6 @@ export default class MenuScene extends Phaser.Scene {
     // Learn Mode button
     const learnModeButton = this.add.image(600, 300, 'learnmode').setScale(0.2);
 
-    // Log out button
-    this.logOutButton = this.add.image(600, 400, 'logout').setScale(0.2);
-
     // instructions
     this.add.text(400, 500, 'Use arrow keys to move\nUse enter key to select', {
       fontFamily: 'retroFont',
@@ -71,17 +63,9 @@ export default class MenuScene extends Phaser.Scene {
       this.scene.start('LearnModeTutorial');
     });
 
-    this.logOutButton.on('selected', () => {
-      // if (!this.loggingOut) {
-      store.dispatch(logout());
-      // this.loggingOut = true;
-      // }
-    });
-
     //each .on() should have a matching .off() to ensure that events are cleaned up.
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       learnModeButton.off('selected');
-      this.logOutButton.off('selected');
     });
 
     //sets the cursor
@@ -125,10 +109,6 @@ export default class MenuScene extends Phaser.Scene {
   }
 
   update() {
-    this.player = store.getState().player;
-    if (!this.player.id) {
-      this.scene.start('LoggedOutMenu');
-    }
     const upJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.up);
     const downJustPressed = Phaser.Input.Keyboard.JustDown(this.cursors.down);
     const enterJustPressed = Phaser.Input.Keyboard.JustDown(this.enter);
