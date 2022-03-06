@@ -6,31 +6,22 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
-    "deploy": "script/deploy",
-    "heroku-token": "script/encrypt-heroku-auth-token.js",
     "lint": "eslint ./ --ignore-path .gitignore",
     "lint-fix": "npm run lint -- --fix",
     "prettify": "prettier --write \"**/*.{js,jsx,json,css,scss,md}\"",
-    "seed": "node script/seed.js",
     "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
   },
   "dependencies": {
     "axios": "^0.21.0",
-    "connect-session-sequelize": "^7.0.4",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
     "morgan": "^1.10.0",
-    "passport": "^0.4.1",
-    "pg": "^8.5.1",
-    "pg-hstore": "^2.3.3",
     "phaser": "^3.24.1",
     "phaser3-rex-plugins": "^1.1.39",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "sequelize": "^6.3.5"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",
