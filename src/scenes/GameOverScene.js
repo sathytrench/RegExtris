@@ -30,13 +30,13 @@ export default class GameOverScene extends Phaser.Scene {
       type: 'doughnut',
       data: {
         labels: ['Tetris: ' + this.tetrisScore, 'RegEx: ' + this.regExScore],
-        backgroundColor: 'rgba(229, 170, 49, 1)',
-        borderColor: 'rgba(229, 170, 49, 1)',
-        borderColor: ['rgba(229, 170, 49, 1)', 'rgba(153, 0, 255, 1)'],
+        backgroundColor: 'rgba(122, 139, 244, 1)',
+        borderColor: 'rgba(122, 139, 244, 1)',
+        borderColor: ['rgba(122, 139, 244, 1)', 'rgba(255, 255, 255, 1)'],
         datasets: [
           {
             data: [this.tetrisScore, this.regExScore],
-            backgroundColor: ['rgba(229, 170, 49, 1)', 'rgba(153, 0, 255, 1)'],
+            backgroundColor: ['rgba(122, 139, 244, 1)', 'rgba(255, 255, 255, 1)'],
           },
         ],
       },
