@@ -8,6 +8,11 @@
 
 body {
     background-color: #2F313F;
+    width: 100%;
+}
+
+canvas {
+    max-height: 95vh;
 }
 
 #game-container {
@@ -16,97 +21,13 @@ body {
     align-items: center;
     border: none;
     top: 0;
-    height: 100vh;
-    width: 100vw;
+    position: relative
 } 
 
 #game {
-    cursor: none;
+    position: absolute;
+    height: 100%;
 }
-
-label {
-    color: white;
-    justify-content: left;
-    height: fit-content;
-    padding-right: 15px;
-    text-align: left;
-}
-
-.inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.input-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: fit-content;
-}
-
-.form-title {
-    color: white;
-    font-size: 1.75rem;
-    text-align: center;
-}
-form {
-    background: none;
-    height: fit-content;
-    margin: 0;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-input {
-    border: none;
-    outline: none;
-    width: 10.5ch;
-    background: repeating-linear-gradient(90deg, red 0, red 1ch, transparent 0, transparent 1.5ch) 0 100%/ 10ch 4px no-repeat;
-    color: white;
-    letter-spacing: 0.5ch;
-    font-size: 2rem;
-  }
-input:focus {
-    outline: none;
-    color: #7a8bf4;
-}
-
-.submit-button, .escape-button {
-    display: inline-block;
-    background: none;
-    border: none;
-    color: #ffffff;
-    text-align: center;
-    font-size: 2rem;
-    padding: 5px;
-    cursor: pointer;
-    margin: 25px;
-    outline: none;
-    width: fit-content;
-}
-
-.submit-button:focus, .escape-button:focus, .submit-button:hover, .escape-button:hover {
-    animation: glowing 2000ms infinite;
-}
-
-@keyframes glowing {
-    50% {
-      background-color: #7a8bf4;
-      box-shadow: 0 0 10px #7a8bf4;
-    }
-  }
 
 #error {
     color: white;
