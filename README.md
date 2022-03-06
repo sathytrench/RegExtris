@@ -6,17 +6,17 @@ When [Spandana Nallapati](https://github.com/drsnallapati), [Ali Wojcikiewicz](h
   <img src="https://github.com/SA3-Games/RegExtris/blob/master/public/assets/spritesheets/REGEXTRISbw2.png" alt="RegExtris" width="800">
 </h1>
 
-
 <h3 align="center">A Tetris homage that tests your RegEx skills!</h3>
 
 [![NPM Version][npm-image]][npm-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/52b11713-5d00-4a0d-bc84-8872c59161da/deploy-status)](https://app.netlify.com/sites/regextris/deploys)
 
 RegExtris takes the classic game of Tetris and makes it into a learning and practicing environment for regular expressions. Learning to use regular expressions can be a daunting task and often programmers tend to leave it in the "I'll just google it when I need it" but having a basic understanding of the power of regex can take that google search to a much complex place. If you're comfortable with regex already, you can dive in and play or if you need a bit more guidance then you can use the learn mode to get your bearings first.
 <h3 align="center"><img src="https://github.com/SA3-Games/RegExtris/blob/master/public/assets/sprites/MainTutorial3.png" alt="RegExtris" width="300">               <img src="https://github.com/SA3-Games/RegExtris/blob/master/public/assets/sprites/LearnModeTutorial2.png" alt="RegExtris" width="300"></h3>
 
 ## Follow this link to our app!
 
-??????????????????????/
+regextris.netlify.app
 
 ## Installation
 
@@ -58,8 +58,6 @@ The GNU General Public License is a free, copyleft license for
 software and other kinds of works.
 
 <h4>GNU General Public License v3.0</h4>
-
-
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
