@@ -16,7 +16,7 @@ RegExtris takes the classic game of Tetris and makes it into a learning and prac
 
 ## Follow this link to our app!
 
-regextris.netlify.app
+https://regextris.netlify.app/
 
 ## Installation
 
