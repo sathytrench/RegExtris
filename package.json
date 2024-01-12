@@ -2,6 +2,9 @@
   "name": "regextris",
   "version": "1.1.2",
   "description": "A Tetris inspired game to practice ReGex",
+  "engines": {
+    "node": "<=13.0.0"
+  },
   "main": "src/index.js",
   "scripts": {
     "build-client": "webpack",

@@ -21,6 +21,8 @@ https://regextris.netlify.app/
 ## Installation
 
 ```sh
+`nvm install 12.22.12`
+`nvm use`
 `npm install`
 `npm run start-dev`
 Find the game at http://localhost:8080. 
